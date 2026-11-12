@@ -1,0 +1,352 @@
+/* =========================================================
+   responsive.css — адаптивные стили «Зелёного угла»
+   КР №3. Рользинг И. В., ЭФБО-13-25
+
+   Подход Mobile First: базовые стили в style.css рассчитаны на телефон.
+   Здесь только медиазапросы min-width, которые постепенно расширяют
+   раскладку. Подключается ПОСЛЕ style.css.
+
+   Контрольные точки:
+     480px  — крупный телефон (430px и шире в повороте)
+     600px  — маленький планшет / телефон горизонтально
+     768px  — планшет
+     1024px — небольшой десктоп
+     1440px — широкий десктоп
+   ========================================================= */
+
+
+/* ---------- ≥ 480px: крупный телефон ---------- */
+@media (min-width: 480px) {
+  :root {
+    --container-padding: 20px;
+  }
+
+  /* Кнопки hero и формы встают в строку */
+  .hero__actions,
+  .form__actions,
+  .product__actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /* Способы получения заказа — в строку, если помещаются */
+  .form__options {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /* Преимущества — по две карточки */
+  .advantages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* В подвале — две колонки */
+  .site-footer__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Контакты: подпись и значение в одной строке */
+  .contacts__row {
+    grid-template-columns: 140px 1fr;
+    gap: var(--space-md);
+  }
+}
+
+
+/* ---------- ≥ 600px: карточки товаров в две колонки ---------- */
+@media (min-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  /* Поля формы в строке — по два */
+  .form__row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__row > .form__field {
+    flex: 1 1 220px;
+  }
+
+  .form__row > .form__field--narrow {
+    flex: 0 1 140px;
+  }
+
+  .order-form {
+    padding: var(--space-lg);
+  }
+}
+
+
+/* ---------- ≥ 768px: планшет ---------- */
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 24px;
+    --header-height: 72px;
+  }
+
+  .section {
+    padding: var(--space-xl) 0;
+  }
+
+  .section__title {
+    font-size: 1.6rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  /* Кнопка «Оставить заявку» снова видна в шапке */
+  .site-header__cta {
+    display: inline-flex;
+  }
+
+  /* Hero в две колонки: текст + картинка-композиция (через <picture>) */
+  .hero {
+    padding: var(--space-xl) 0;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1.1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .hero__text {
+    font-size: 1.15rem;
+  }
+
+  .hero__image {
+    border-radius: 0;
+  }
+
+  /* Отзывы — три колонки */
+  .reviews {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Страница товара: фото и описание рядом */
+  .product {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .product__title {
+    font-size: 2.2rem;
+  }
+
+  /* Таблицы сравнения: обычный табличный вид вместо карточек */
+  .table--stack {
+    min-width: 560px;
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .table--stack thead {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+  }
+
+  .table--stack thead {
+    display: table-header-group;
+  }
+
+  .table--stack tbody {
+    display: table-row-group;
+  }
+
+  .table--stack tr {
+    display: table-row;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .table--stack th,
+  .table--stack td {
+    display: table-cell;
+  }
+
+  .table--stack tbody th {
+    color: inherit;
+    background-color: transparent;
+  }
+
+  .table--stack td {
+    text-align: center;
+  }
+
+  .table--stack td::before {
+    content: none;
+  }
+
+  .table--stack tbody tr:nth-child(even) {
+    background-color: var(--color-bg);
+  }
+
+  .table--stack .table__caption {
+    display: table-caption;
+  }
+
+  /* Контакты: информация и форма рядом */
+  .contacts {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .map {
+    height: 260px;
+  }
+
+  .to-top {
+    right: var(--space-lg);
+    bottom: var(--space-lg);
+  }
+
+  .message {
+    margin: var(--space-xl) auto;
+    padding: var(--space-xl) var(--space-lg);
+  }
+}
+
+
+/* ---------- ≥ 1024px: десктоп ---------- */
+@media (min-width: 1024px) {
+  /* Полноценное горизонтальное меню, гамбургер скрыт */
+  .js .menu-toggle {
+    display: none;
+  }
+
+  .site-header__inner {
+    flex-wrap: nowrap;
+  }
+
+  .site-nav,
+  .js .site-nav {
+    display: block;
+    flex-basis: auto;
+    padding-bottom: 0;
+  }
+
+  .site-nav__list {
+    flex-direction: row;
+  }
+
+  /* Подвал — четыре колонки */
+  .site-footer__inner {
+    grid-template-columns: 1.4fr repeat(3, 1fr);
+  }
+
+  /* Преимущества — четыре в ряд */
+  .advantages {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+  }
+
+  /* Популярные товары на главной — три в ряд */
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Каталог: боковой фильтр + сетка карточек */
+  .catalog {
+    grid-template-columns: 260px 1fr;
+  }
+
+  .catalog .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Фильтр всегда раскрыт и «прилипает» при прокрутке */
+  .catalog__filters {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-md));
+  }
+
+  .js .filters__toggle {
+    display: none;
+  }
+
+  .js .filters__title {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+  }
+
+  .js .filters__form {
+    display: flex;
+    margin-top: 0;
+  }
+
+  /* Категории больше не нужно прокручивать */
+  .categories {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  /* Товар: таблицы + боковой блок советов */
+  .product-details {
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .care {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-md));
+  }
+
+  /* Заявка: форма + блок «Что будет дальше» */
+  .order {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .steps {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-md));
+  }
+}
+
+
+/* ---------- ≥ 1280px: каталог в три колонки ---------- */
+@media (min-width: 1280px) {
+  .catalog .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ---------- ≥ 1440px: широкий десктоп ---------- */
+@media (min-width: 1440px) {
+  html {
+    font-size: 17px;
+  }
+
+  .hero {
+    padding: 80px 0;
+  }
+
+  .catalog {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+
+/* ---------- Доступность: уважаем настройку «уменьшить движение» ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

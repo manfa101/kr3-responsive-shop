@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог растений — Зелёный угол</title>
+  <meta name="description" content="Каталог комнатных растений: крупные, неприхотливые, суккуленты и ампельные растения с ценами.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Адаптивные стили подключаются после style.css, чтобы переопределять базовые -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>document.documentElement.className = 'js';</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo logo" href="index.html">
+        <img class="logo__icon" src="images/logo.svg" alt="" width="40" height="40">
+        <span class="logo__text">Зелёный угол</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__icon" aria-hidden="true"></span>
+        <span class="menu-toggle__text">Меню</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="button button--small site-header__cta" href="order.html">Оставить заявку</a>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+          <li class="breadcrumbs__item" aria-current="page">Каталог</li>
+        </ol>
+      </nav>
+
+      <h1 class="page-title">Каталог растений</h1>
+
+      <ul class="categories" aria-label="Категории каталога">
+        <li><a class="categories__link" href="#large">Крупные</a></li>
+        <li><a class="categories__link" href="#easy">Неприхотливые</a></li>
+        <li><a class="categories__link" href="#succulents">Суккуленты и ампельные</a></li>
+      </ul>
+
+      <div class="catalog">
+        <aside class="catalog__filters filters" aria-labelledby="filters-title">
+          <h2 class="filters__title" id="filters-title">Фильтры</h2>
+          <button class="filters__toggle button button--outline button--block" type="button" aria-expanded="false" aria-controls="filters-body">
+            Показать фильтры
+          </button>
+          <form class="filters__form" id="filters-body" action="catalog.html" method="get">
+            <fieldset class="filters__group">
+              <legend class="filters__legend">Освещение</legend>
+              <label class="filters__option"><input type="checkbox" name="light" value="bright"> Яркий свет</label>
+              <label class="filters__option"><input type="checkbox" name="light" value="diffused"> Рассеянный</label>
+              <label class="filters__option"><input type="checkbox" name="light" value="shade"> Полутень</label>
+            </fieldset>
+            <fieldset class="filters__group">
+              <legend class="filters__legend">Уход</legend>
+              <label class="filters__option"><input type="radio" name="care" value="any" checked> Любой</label>
+              <label class="filters__option"><input type="radio" name="care" value="easy"> Для новичков</label>
+            </fieldset>
+            <fieldset class="filters__group">
+              <legend class="filters__legend">Цена, ₽</legend>
+              <div class="filters__range">
+                <label class="visually-hidden" for="price-from">Цена от</label>
+                <input class="filters__input" id="price-from" type="number" name="from" placeholder="от" min="0">
+                <label class="visually-hidden" for="price-to">Цена до</label>
+                <input class="filters__input" id="price-to" type="number" name="to" placeholder="до" min="0">
+              </div>
+            </fieldset>
+            <button class="button button--small button--block" type="submit">Показать</button>
+            <button class="button button--small button--block button--disabled" type="button" disabled>Сбросить</button>
+          </form>
+        </aside>
+
+        <div class="catalog__content">
+          <section class="catalog__section" id="large" aria-labelledby="large-title">
+            <h2 class="catalog__section-title" id="large-title">Крупные растения</h2>
+            <div class="product-grid">
+              <article class="product-card">
+                <span class="badge badge--hit product-card__badge">Хит</span>
+                <picture>
+              <source type="image/webp" srcset="images/monstera-480.webp 480w, images/monstera-640.webp 640w, images/monstera-960.webp 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw">
+              <img class="product-card__image" src="images/monstera-640.jpg" srcset="images/monstera-480.jpg 480w, images/monstera-640.jpg 640w, images/monstera-960.jpg 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw" alt="Монстера в светлом горшке" width="640" height="480" loading="lazy" decoding="async">
+            </picture>
+                <div class="product-card__body">
+                  <p class="product-card__category">Рассеянный свет</p>
+                  <h3 class="product-card__title">Монстера деликатесная</h3>
+                  <p class="product-card__description">Высота 60–70 см, горшок 19 см.</p>
+                  <div class="product-card__footer">
+                    <p class="product-card__price">1 890 ₽</p>
+                    <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card">
+                <span class="badge badge--new product-card__badge">Новинка</span>
+                <picture>
+              <source type="image/webp" srcset="images/ficus-480.webp 480w, images/ficus-640.webp 640w, images/ficus-960.webp 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw">
+              <img class="product-card__image" src="images/ficus-640.jpg" srcset="images/ficus-480.jpg 480w, images/ficus-640.jpg 640w, images/ficus-960.jpg 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw" alt="Фикус лировидный в светлом горшке" width="640" height="480" loading="lazy" decoding="async">
+            </picture>
+                <div class="product-card__body">
+                  <p class="product-card__category">Яркий свет</p>
+                  <h3 class="product-card__title">Фикус лировидный</h3>
+                  <p class="product-card__description">Высота 80–90 см, горшок 21 см.</p>
+                  <div class="product-card__footer">
+                    <p class="product-card__price">2 490 ₽</p>
+                    <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="catalog__section" id="easy" aria-labelledby="easy-title">
+            <h2 class="catalog__section-title" id="easy-title">Неприхотливые</h2>
+            <div class="product-grid">
+              <article class="product-card product-card--discount">
+                <span class="badge badge--sale product-card__badge">−20%</span>
+                <picture>
+              <source type="image/webp" srcset="images/sansevieria-480.webp 480w, images/sansevieria-640.webp 640w, images/sansevieria-960.webp 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw">
+              <img class="product-card__image" src="images/sansevieria-640.jpg" srcset="images/sansevieria-480.jpg 480w, images/sansevieria-640.jpg 640w, images/sansevieria-960.jpg 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw" alt="Сансевиерия в светлом горшке" width="640" height="480" loading="lazy" decoding="async">
+            </picture>
+                <div class="product-card__body">
+                  <p class="product-card__category">Полутень</p>
+                  <h3 class="product-card__title">Сансевиерия трёхпучковая</h3>
+                  <p class="product-card__description">Высота 45 см, полив раз в 2–3 недели.</p>
+                  <div class="product-card__footer">
+                    <p class="product-card__price"><s class="product-card__old-price">1 290 ₽</s> 990 ₽</p>
+                    <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card">
+                <picture>
+              <source type="image/webp" srcset="images/zamioculcas-480.webp 480w, images/zamioculcas-640.webp 640w, images/zamioculcas-960.webp 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw">
+              <img class="product-card__image" src="images/zamioculcas-640.jpg" srcset="images/zamioculcas-480.jpg 480w, images/zamioculcas-640.jpg 640w, images/zamioculcas-960.jpg 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw" alt="Замиокулькас в светлом горшке" width="640" height="480" loading="lazy" decoding="async">
+            </picture>
+                <div class="product-card__body">
+                  <p class="product-card__category">Полутень</p>
+                  <h3 class="product-card__title">Замиокулькас</h3>
+                  <p class="product-card__description">«Долларовое дерево», высота 50 см.</p>
+                  <div class="product-card__footer">
+                    <p class="product-card__price">1 490 ₽</p>
+                    <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="catalog__section" id="succulents" aria-labelledby="succulents-title">
+            <h2 class="catalog__section-title" id="succulents-title">Суккуленты и ампельные</h2>
+            <div class="product-grid">
+              <article class="product-card product-card--sold-out">
+                <span class="badge badge--muted product-card__badge">Нет в наличии</span>
+                <picture>
+              <source type="image/webp" srcset="images/cactus-480.webp 480w, images/cactus-640.webp 640w, images/cactus-960.webp 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw">
+              <img class="product-card__image" src="images/cactus-640.jpg" srcset="images/cactus-480.jpg 480w, images/cactus-640.jpg 640w, images/cactus-960.jpg 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw" alt="Цветущий кактус в светлом горшке" width="640" height="480" loading="lazy" decoding="async">
+            </picture>
+                <div class="product-card__body">
+                  <p class="product-card__category">Яркий свет</p>
+                  <h3 class="product-card__title">Эхинокактус цветущий</h3>
+                  <p class="product-card__description">Диаметр 12 см, цветёт весной.</p>
+                  <div class="product-card__footer">
+                    <p class="product-card__price">590 ₽</p>
+                    <a class="button button--small button--outline product-card__button" href="order.html">Под заказ</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card">
+                <span class="badge badge--hit product-card__badge">Хит</span>
+                <picture>
+              <source type="image/webp" srcset="images/pothos-480.webp 480w, images/pothos-640.webp 640w, images/pothos-960.webp 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw">
+              <img class="product-card__image" src="images/pothos-640.jpg" srcset="images/pothos-480.jpg 480w, images/pothos-640.jpg 640w, images/pothos-960.jpg 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw" alt="Эпипремнум со свисающими побегами" width="640" height="480" loading="lazy" decoding="async">
+            </picture>
+                <div class="product-card__body">
+                  <p class="product-card__category">Рассеянный свет</p>
+                  <h3 class="product-card__title">Эпипремнум золотистый</h3>
+                  <p class="product-card__description">Ампельное, побеги до 1 м.</p>
+                  <div class="product-card__footer">
+                    <p class="product-card__price">790 ₽</p>
+                    <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <p class="catalog__note">Не нашли нужное растение? <a href="order.html">Оставьте заявку</a> или <a href="contacts.html">напишите нам</a> — привезём под заказ.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner container">
+      <div class="site-footer__col">
+        <p class="site-footer__brand">Зелёный угол</p>
+        <p class="site-footer__text">Магазин комнатных растений с доставкой по Москве. Учебный проект КР №3.</p>
+      </div>
+      <nav class="site-footer__col" aria-label="Разделы главной страницы">
+        <h2 class="site-footer__title">На главной</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+          <li><a class="site-footer__link" href="index.html#reviews">Отзывы</a></li>
+          <li><a class="site-footer__link" href="index.html#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <nav class="site-footer__col" aria-label="Покупателям">
+        <h2 class="site-footer__title">Покупателям</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-footer__link" href="delivery.html#tariffs">Доставка и оплата</a></li>
+          <li><a class="site-footer__link" href="delivery.html#faq">Вопросы и ответы</a></li>
+          <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Связаться</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+          <li><a class="site-footer__link" href="mailto:hello@zeleny-ugol.example">hello@zeleny-ugol.example</a></li>
+          <li class="site-footer__text">Ежедневно с 10:00 до 21:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      <p>© 2026 Зелёный угол. Рользинг Иван Викторович, ЭФБО-13-25</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+
+</body>
+</html>

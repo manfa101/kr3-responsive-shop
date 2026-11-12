@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Зелёный угол — магазин комнатных растений</title>
+  <meta name="description" content="Комнатные растения с доставкой по Москве: монстеры, фикусы, суккуленты. Подбор растений и консультации по уходу.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Адаптивные стили подключаются после style.css, чтобы переопределять базовые -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>document.documentElement.className = 'js';</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo logo" href="index.html">
+        <img class="logo__icon" src="images/logo.svg" alt="" width="40" height="40">
+        <span class="logo__text">Зелёный угол</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__icon" aria-hidden="true"></span>
+        <span class="menu-toggle__text">Меню</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="button button--small site-header__cta" href="order.html">Оставить заявку</a>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+    <section class="hero">
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Доставка по Москве за 1 день</p>
+          <h1 class="hero__title">Живые растения для дома и&nbsp;офиса</h1>
+          <p class="hero__text">Подберём растение под ваш свет, интерьер и опыт ухода. Каждое растение проходит карантин и приезжает в новом горшке.</p>
+          <div class="hero__actions">
+            <a class="button" href="catalog.html">Перейти в каталог</a>
+            <a class="button button--outline" href="#advantages">Почему мы</a>
+          </div>
+        </div>
+        <picture class="hero__picture">
+          <source media="(min-width: 768px)" type="image/webp" srcset="images/hero-520.webp 520w, images/hero-1040.webp 1040w" sizes="(min-width: 1024px) 520px, 45vw">
+          <source media="(min-width: 768px)" srcset="images/hero-520.png 520w, images/hero-1040.png 1040w" sizes="(min-width: 1024px) 520px, 45vw">
+          <source type="image/webp" srcset="images/monstera-480.webp 480w, images/monstera-640.webp 640w, images/monstera-960.webp 960w" sizes="100vw">
+          <img class="hero__image" src="images/monstera-640.jpg" srcset="images/monstera-480.jpg 480w, images/monstera-640.jpg 640w, images/monstera-960.jpg 960w" sizes="100vw" alt="Монстера и другие комнатные растения в горшках" width="640" height="480">
+        </picture>
+      </div>
+    </section>
+
+    <section class="section" id="advantages" aria-labelledby="advantages-title">
+      <div class="container">
+        <h2 class="section__title" id="advantages-title">Преимущества</h2>
+        <ul class="advantages">
+          <li class="advantages__item">
+            <span class="advantages__icon" aria-hidden="true">🌱</span>
+            <h3 class="advantages__title">Здоровые растения</h3>
+            <p class="advantages__text">Карантин 14 дней и осмотр перед отправкой.</p>
+          </li>
+          <li class="advantages__item">
+            <span class="advantages__icon" aria-hidden="true">🚚</span>
+            <h3 class="advantages__title">Бережная доставка</h3>
+            <p class="advantages__text">Упаковываем в коробки с фиксацией горшка, зимой — с утеплением.</p>
+          </li>
+          <li class="advantages__item">
+            <span class="advantages__icon" aria-hidden="true">💬</span>
+            <h3 class="advantages__title">Помощь с уходом</h3>
+            <p class="advantages__text">Памятка в комплекте и консультации в мессенджере 30 дней.</p>
+          </li>
+          <li class="advantages__item">
+            <span class="advantages__icon" aria-hidden="true">↩</span>
+            <h3 class="advantages__title">Гарантия</h3>
+            <p class="advantages__text">Заменим растение, если оно погибло в первые 2 недели.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--tinted" id="popular" aria-labelledby="popular-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title" id="popular-title">Популярные товары</h2>
+          <a class="section__link" href="catalog.html">Весь каталог →</a>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <span class="badge badge--hit product-card__badge">Хит</span>
+            <picture>
+              <source type="image/webp" srcset="images/monstera-480.webp 480w, images/monstera-640.webp 640w, images/monstera-960.webp 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw">
+              <img class="product-card__image" src="images/monstera-640.jpg" srcset="images/monstera-480.jpg 480w, images/monstera-640.jpg 640w, images/monstera-960.jpg 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw" alt="Монстера в светлом горшке" width="640" height="480" loading="lazy" decoding="async">
+            </picture>
+            <div class="product-card__body">
+              <p class="product-card__category">Крупные</p>
+              <h3 class="product-card__title">Монстера деликатесная</h3>
+              <p class="product-card__description">Крупные резные листья, быстро растёт, любит рассеянный свет.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">1 890 ₽</p>
+                <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card product-card--discount">
+            <span class="badge badge--sale product-card__badge">−20%</span>
+            <picture>
+              <source type="image/webp" srcset="images/sansevieria-480.webp 480w, images/sansevieria-640.webp 640w, images/sansevieria-960.webp 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw">
+              <img class="product-card__image" src="images/sansevieria-640.jpg" srcset="images/sansevieria-480.jpg 480w, images/sansevieria-640.jpg 640w, images/sansevieria-960.jpg 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw" alt="Сансевиерия в светлом горшке" width="640" height="480" loading="lazy" decoding="async">
+            </picture>
+            <div class="product-card__body">
+              <p class="product-card__category">Неприхотливые</p>
+              <h3 class="product-card__title">Сансевиерия трёхпучковая</h3>
+              <p class="product-card__description">Переносит тень и редкий полив. Идеальна для новичков.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price"><s class="product-card__old-price">1 290 ₽</s> 990 ₽</p>
+                <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <span class="badge badge--new product-card__badge">Новинка</span>
+            <picture>
+              <source type="image/webp" srcset="images/ficus-480.webp 480w, images/ficus-640.webp 640w, images/ficus-960.webp 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw">
+              <img class="product-card__image" src="images/ficus-640.jpg" srcset="images/ficus-480.jpg 480w, images/ficus-640.jpg 640w, images/ficus-960.jpg 960w" sizes="(min-width: 1024px) 300px, (min-width: 600px) 50vw, 100vw" alt="Фикус лировидный в светлом горшке" width="640" height="480" loading="lazy" decoding="async">
+            </picture>
+            <div class="product-card__body">
+              <p class="product-card__category">Крупные</p>
+              <h3 class="product-card__title">Фикус лировидный</h3>
+              <p class="product-card__description">Эффектное дерево с крупными листьями-«скрипками».</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">2 490 ₽</p>
+                <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <h2 class="section__title" id="reviews-title">Отзывы покупателей</h2>
+        <div class="reviews">
+          <blockquote class="review">
+            <p class="review__text">Монстера приехала в отличном состоянии, упакована очень аккуратно. Через месяц выпустила новый лист!</p>
+            <footer class="review__author">Анна, Москва</footer>
+          </blockquote>
+          <blockquote class="review">
+            <p class="review__text">Помогли подобрать растения в офис без окон рядом со столами. Всё прижилось.</p>
+            <footer class="review__author">Дмитрий, офис-менеджер</footer>
+          </blockquote>
+          <blockquote class="review">
+            <p class="review__text">Купила сансевиерию по скидке, в комплекте была понятная памятка по уходу.</p>
+            <footer class="review__author">Мария, Химки</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted" id="contacts" aria-labelledby="contacts-title">
+      <div class="container contacts-preview">
+        <div>
+          <h2 class="section__title" id="contacts-title">Контакты</h2>
+          <p>Шоурум: Москва, ул. Садовая, 12. Ежедневно с 10:00 до 21:00.</p>
+          <p>Телефон: <a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+        </div>
+        <div class="contacts-preview__actions">
+          <a class="button" href="order.html">Оставить заявку</a>
+          <a class="button button--outline" href="contacts.html">Все контакты</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner container">
+      <div class="site-footer__col">
+        <p class="site-footer__brand">Зелёный угол</p>
+        <p class="site-footer__text">Магазин комнатных растений с доставкой по Москве. Учебный проект КР №3.</p>
+      </div>
+      <nav class="site-footer__col" aria-label="Разделы главной страницы">
+        <h2 class="site-footer__title">На главной</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+          <li><a class="site-footer__link" href="index.html#reviews">Отзывы</a></li>
+          <li><a class="site-footer__link" href="index.html#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <nav class="site-footer__col" aria-label="Покупателям">
+        <h2 class="site-footer__title">Покупателям</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-footer__link" href="delivery.html#tariffs">Доставка и оплата</a></li>
+          <li><a class="site-footer__link" href="delivery.html#faq">Вопросы и ответы</a></li>
+          <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Связаться</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+          <li><a class="site-footer__link" href="mailto:hello@zeleny-ugol.example">hello@zeleny-ugol.example</a></li>
+          <li class="site-footer__text">Ежедневно с 10:00 до 21:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      <p>© 2026 Зелёный угол. Рользинг Иван Викторович, ЭФБО-13-25</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+
+</body>
+</html>

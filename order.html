@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформление заявки — Зелёный угол</title>
+  <meta name="description" content="Оставьте заявку на покупку комнатного растения с доставкой или самовывозом.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Адаптивные стили подключаются после style.css, чтобы переопределять базовые -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>document.documentElement.className = 'js';</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo logo" href="index.html">
+        <img class="logo__icon" src="images/logo.svg" alt="" width="40" height="40">
+        <span class="logo__text">Зелёный угол</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__icon" aria-hidden="true"></span>
+        <span class="menu-toggle__text">Меню</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html" aria-current="page">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="button button--small site-header__cta" href="order.html">Оставить заявку</a>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+          <li class="breadcrumbs__item" aria-current="page">Оформление заявки</li>
+        </ol>
+      </nav>
+
+      <h1 class="page-title">Оформление заявки</h1>
+
+      <div class="order">
+        <section class="order__main" aria-labelledby="order-form-title">
+          <h2 class="visually-hidden" id="order-form-title">Форма заявки</h2>
+          <form class="form order-form" action="thanks.html" method="get">
+            <p class="form__note">Поля, отмеченные <span class="form__required" aria-hidden="true">*</span>, обязательны.</p>
+
+            <fieldset class="form__group">
+              <legend class="form__legend">Контактные данные</legend>
+              <div class="form__row">
+                <div class="form__field">
+                  <label class="form__label" for="order-name">Имя <span class="form__required" aria-hidden="true">*</span></label>
+                  <input class="form__input" id="order-name" name="name" type="text" autocomplete="name" minlength="2" required>
+                </div>
+                <div class="form__field">
+                  <label class="form__label" for="order-phone">Телефон <span class="form__required" aria-hidden="true">*</span></label>
+                  <input class="form__input" id="order-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 900 000-00-00" pattern="[+0-9 ()\-]{10,18}" aria-describedby="order-phone-hint" required>
+                  <p class="form__hint" id="order-phone-hint">Только цифры, пробелы, скобки и дефис.</p>
+                </div>
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="order-email">E-mail <span class="form__required" aria-hidden="true">*</span></label>
+                <input class="form__input" id="order-email" name="email" type="email" autocomplete="email" placeholder="name@example.ru" aria-describedby="order-email-hint" required>
+                <p class="form__hint" id="order-email-hint">Пришлём подтверждение и трек-номер.</p>
+              </div>
+            </fieldset>
+
+            <fieldset class="form__group">
+              <legend class="form__legend">Заказ</legend>
+              <div class="form__row">
+                <div class="form__field">
+                  <label class="form__label" for="order-product">Растение <span class="form__required" aria-hidden="true">*</span></label>
+                  <select class="form__input form__select" id="order-product" name="product" required>
+                    <option value="">Выберите растение</option>
+                    <option value="monstera">Монстера деликатесная — 1 890 ₽</option>
+                    <option value="ficus">Фикус лировидный — 2 490 ₽</option>
+                    <option value="sansevieria">Сансевиерия — 990 ₽</option>
+                    <option value="zamioculcas">Замиокулькас — 1 490 ₽</option>
+                    <option value="pothos">Эпипремнум — 790 ₽</option>
+                    <option value="cactus">Эхинокактус (под заказ) — 590 ₽</option>
+                    <option value="other">Другое / подобрать растение</option>
+                  </select>
+                </div>
+                <div class="form__field form__field--narrow">
+                  <label class="form__label" for="order-qty">Количество</label>
+                  <input class="form__input" id="order-qty" name="qty" type="number" min="1" max="20" value="1">
+                </div>
+              </div>
+              <div class="form__field">
+                <span class="form__label" id="delivery-label">Способ получения</span>
+                <div class="form__options" role="radiogroup" aria-labelledby="delivery-label">
+                  <label class="form__option"><input type="radio" name="delivery" value="courier" checked> Курьер по Москве</label>
+                  <label class="form__option"><input type="radio" name="delivery" value="pickup"> Самовывоз из шоурума</label>
+                  <label class="form__option"><input type="radio" name="delivery" value="cdek"> Пункт выдачи СДЭК</label>
+                </div>
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="order-comment">Комментарий</label>
+                <textarea class="form__input form__textarea" id="order-comment" name="comment" rows="4" placeholder="Адрес, удобное время, пожелания по подарочной упаковке"></textarea>
+              </div>
+            </fieldset>
+
+            <label class="form__checkbox">
+              <input name="agree" type="checkbox" required>
+              <span>Согласен на обработку персональных данных <span class="form__required" aria-hidden="true">*</span></span>
+            </label>
+
+            <div class="form__actions">
+              <button class="button" type="submit">Отправить заявку</button>
+              <button class="button button--ghost" type="reset">Очистить</button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="order__aside steps" aria-labelledby="steps-title">
+          <h2 class="steps__title" id="steps-title">Что будет дальше</h2>
+          <ol class="steps__list">
+            <li class="steps__item">Перезвоним в течение 15 минут и уточним детали.</li>
+            <li class="steps__item">Подготовим растение и пришлём фото перед отправкой.</li>
+            <li class="steps__item">Доставим в выбранный день. Оплата при получении.</li>
+          </ol>
+          <a class="steps__link" href="delivery.html#tariffs">Сроки и стоимость доставки →</a>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner container">
+      <div class="site-footer__col">
+        <p class="site-footer__brand">Зелёный угол</p>
+        <p class="site-footer__text">Магазин комнатных растений с доставкой по Москве. Учебный проект КР №3.</p>
+      </div>
+      <nav class="site-footer__col" aria-label="Разделы главной страницы">
+        <h2 class="site-footer__title">На главной</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+          <li><a class="site-footer__link" href="index.html#reviews">Отзывы</a></li>
+          <li><a class="site-footer__link" href="index.html#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <nav class="site-footer__col" aria-label="Покупателям">
+        <h2 class="site-footer__title">Покупателям</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-footer__link" href="delivery.html#tariffs">Доставка и оплата</a></li>
+          <li><a class="site-footer__link" href="delivery.html#faq">Вопросы и ответы</a></li>
+          <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Связаться</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+          <li><a class="site-footer__link" href="mailto:hello@zeleny-ugol.example">hello@zeleny-ugol.example</a></li>
+          <li class="site-footer__text">Ежедневно с 10:00 до 21:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      <p>© 2026 Зелёный угол. Рользинг Иван Викторович, ЭФБО-13-25</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+
+</body>
+</html>

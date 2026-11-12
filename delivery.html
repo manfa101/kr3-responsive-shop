@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Доставка и оплата — Зелёный угол</title>
+  <meta name="description" content="Способы доставки растений, сравнение тарифов, оплата и ответы на частые вопросы.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Адаптивные стили подключаются после style.css, чтобы переопределять базовые -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>document.documentElement.className = 'js';</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo logo" href="index.html">
+        <img class="logo__icon" src="images/logo.svg" alt="" width="40" height="40">
+        <span class="logo__text">Зелёный угол</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__icon" aria-hidden="true"></span>
+        <span class="menu-toggle__text">Меню</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="delivery.html" aria-current="page">Доставка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="button button--small site-header__cta" href="order.html">Оставить заявку</a>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+          <li class="breadcrumbs__item" aria-current="page">Доставка и оплата</li>
+        </ol>
+      </nav>
+
+      <h1 class="page-title">Доставка и оплата</h1>
+
+      <section class="section section--compact" id="tariffs" aria-labelledby="tariffs-title">
+        <h2 class="section__title" id="tariffs-title">Сравнение способов доставки</h2>
+        <div class="table-wrapper">
+          <table class="table table--compare table--stack">
+            <caption class="table__caption">Сроки и стоимость доставки по Москве и области</caption>
+            <thead>
+              <tr>
+                <th scope="col">Параметр</th>
+                <th scope="col">Самовывоз</th>
+                <th scope="col">Курьер</th>
+                <th scope="col">Пункт СДЭК</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Срок</th><td data-label="Самовывоз">в день заказа</td><td data-label="Курьер">1 день</td><td data-label="Пункт СДЭК">2–4 дня</td></tr>
+              <tr><th scope="row">Стоимость</th><td data-label="Самовывоз">бесплатно</td><td data-label="Курьер">390 ₽, от 5 000 ₽ — бесплатно</td><td data-label="Пункт СДЭК">от 290 ₽</td></tr>
+              <tr><th scope="row">Крупные растения (от 80 см)</th><td data-label="Самовывоз">✓</td><td data-label="Курьер">✓</td><td data-label="Пункт СДЭК">—</td></tr>
+              <tr><th scope="row">Утепление зимой</th><td data-label="Самовывоз">—</td><td data-label="Курьер">✓</td><td data-label="Пункт СДЭК">✓</td></tr>
+              <tr><th scope="row">Оплата при получении</th><td data-label="Самовывоз">✓</td><td data-label="Курьер">✓</td><td data-label="Пункт СДЭК">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section section--compact" id="payment" aria-labelledby="payment-title">
+        <h2 class="section__title" id="payment-title">Оплата</h2>
+        <ul class="advantages">
+          <li class="advantages__item">
+            <h3 class="advantages__title">Картой онлайн</h3>
+            <p class="advantages__text">Ссылка на оплату приходит после подтверждения заказа.</p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__title">При получении</h3>
+            <p class="advantages__text">Картой или наличными курьеру и в шоуруме.</p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__title">Для юрлиц</h3>
+            <p class="advantages__text">По счёту, с закрывающими документами.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section section--compact" id="faq" aria-labelledby="faq-title">
+        <h2 class="section__title" id="faq-title">Вопросы и ответы</h2>
+        <div class="faq">
+          <details class="faq__item" open>
+            <summary class="faq__question">Растение не замёрзнет при доставке зимой?</summary>
+            <p class="faq__answer">При температуре ниже +5 °C упаковываем растения в термопакет и крафт, курьер везёт их в тёплом салоне.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Что делать, если растение пришло повреждённым?</summary>
+            <p class="faq__answer">Сфотографируйте его при курьере и напишите нам — заменим растение или вернём деньги.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Можно ли выбрать конкретный экземпляр?</summary>
+            <p class="faq__answer">Да, перед отправкой пришлём фото. Если не понравится — подберём другое.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Нужно ли пересаживать растение после покупки?</summary>
+            <p class="faq__answer">Нет, растения уже пересажены в свежий грунт. Следующая пересадка — через год.</p>
+          </details>
+        </div>
+      </section>
+
+      <p class="catalog__note">Остались вопросы? <a href="contacts.html">Свяжитесь с нами</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner container">
+      <div class="site-footer__col">
+        <p class="site-footer__brand">Зелёный угол</p>
+        <p class="site-footer__text">Магазин комнатных растений с доставкой по Москве. Учебный проект КР №3.</p>
+      </div>
+      <nav class="site-footer__col" aria-label="Разделы главной страницы">
+        <h2 class="site-footer__title">На главной</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+          <li><a class="site-footer__link" href="index.html#reviews">Отзывы</a></li>
+          <li><a class="site-footer__link" href="index.html#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <nav class="site-footer__col" aria-label="Покупателям">
+        <h2 class="site-footer__title">Покупателям</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-footer__link" href="delivery.html#tariffs">Доставка и оплата</a></li>
+          <li><a class="site-footer__link" href="delivery.html#faq">Вопросы и ответы</a></li>
+          <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Связаться</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+          <li><a class="site-footer__link" href="mailto:hello@zeleny-ugol.example">hello@zeleny-ugol.example</a></li>
+          <li class="site-footer__text">Ежедневно с 10:00 до 21:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      <p>© 2026 Зелёный угол. Рользинг Иван Викторович, ЭФБО-13-25</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+
+</body>
+</html>

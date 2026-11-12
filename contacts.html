@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — Зелёный угол</title>
+  <meta name="description" content="Адрес магазина, телефон, почта, часы работы и форма обратной связи.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Адаптивные стили подключаются после style.css, чтобы переопределять базовые -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>document.documentElement.className = 'js';</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo logo" href="index.html">
+        <img class="logo__icon" src="images/logo.svg" alt="" width="40" height="40">
+        <span class="logo__text">Зелёный угол</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__icon" aria-hidden="true"></span>
+        <span class="menu-toggle__text">Меню</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="button button--small site-header__cta" href="order.html">Оставить заявку</a>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+          <li class="breadcrumbs__item" aria-current="page">Контакты</li>
+        </ol>
+      </nav>
+
+      <h1 class="page-title">Контакты</h1>
+
+      <div class="contacts">
+        <section class="contacts__info" aria-labelledby="info-title">
+          <h2 class="section__title" id="info-title">Как нас найти</h2>
+          <address class="contacts__address">
+            <dl class="contacts__list">
+              <div class="contacts__row"><dt>Адрес шоурума</dt><dd>Москва, ул. Садовая, 12, вход со двора</dd></div>
+              <div class="contacts__row"><dt>Телефон</dt><dd><a href="tel:+74950000000">+7 (495) 000-00-00</a></dd></div>
+              <div class="contacts__row"><dt>E-mail</dt><dd><a href="mailto:hello@zeleny-ugol.example">hello@zeleny-ugol.example</a></dd></div>
+              <div class="contacts__row"><dt>Часы работы</dt><dd>Ежедневно, 10:00–21:00</dd></div>
+            </dl>
+          </address>
+          <div class="map" role="img" aria-label="Схема проезда: 5 минут пешком от метро Садовая">
+            <span class="map__pin" aria-hidden="true"></span>
+            <span class="map__label">Зелёный угол</span>
+            <span class="map__metro">Ⓜ Садовая — 5 мин</span>
+          </div>
+        </section>
+
+        <section class="contacts__feedback" aria-labelledby="feedback-title">
+          <h2 class="section__title" id="feedback-title">Обратная связь</h2>
+          <p>Хотите заказать озеленение офиса или задать вопрос? Напишите нам или <a href="order.html">оформите заявку на растение</a>.</p>
+          <form class="form" action="thanks.html" method="get">
+            <div class="form__field">
+              <label class="form__label" for="fb-name">Имя <span class="form__required" aria-hidden="true">*</span></label>
+              <input class="form__input" id="fb-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form__row">
+              <div class="form__field">
+                <label class="form__label" for="fb-email">E-mail <span class="form__required" aria-hidden="true">*</span></label>
+                <input class="form__input" id="fb-email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="fb-phone">Телефон</label>
+                <input class="form__input" id="fb-phone" name="phone" type="tel" autocomplete="tel">
+              </div>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="fb-topic">Тема обращения <span class="form__required" aria-hidden="true">*</span></label>
+              <select class="form__input form__select" id="fb-topic" name="topic" required>
+                <option value="">Выберите тему</option>
+                <option value="question">Вопрос по уходу</option>
+                <option value="office">Озеленение офиса</option>
+                <option value="order">Вопрос по заказу</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="fb-message">Сообщение <span class="form__required" aria-hidden="true">*</span></label>
+              <textarea class="form__input form__textarea" id="fb-message" name="message" rows="5" required></textarea>
+            </div>
+            <label class="form__checkbox">
+              <input name="agree" type="checkbox" required>
+              <span>Согласен на обработку персональных данных</span>
+            </label>
+            <div class="form__actions">
+              <button class="button" type="submit">Отправить</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner container">
+      <div class="site-footer__col">
+        <p class="site-footer__brand">Зелёный угол</p>
+        <p class="site-footer__text">Магазин комнатных растений с доставкой по Москве. Учебный проект КР №3.</p>
+      </div>
+      <nav class="site-footer__col" aria-label="Разделы главной страницы">
+        <h2 class="site-footer__title">На главной</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+          <li><a class="site-footer__link" href="index.html#reviews">Отзывы</a></li>
+          <li><a class="site-footer__link" href="index.html#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <nav class="site-footer__col" aria-label="Покупателям">
+        <h2 class="site-footer__title">Покупателям</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-footer__link" href="delivery.html#tariffs">Доставка и оплата</a></li>
+          <li><a class="site-footer__link" href="delivery.html#faq">Вопросы и ответы</a></li>
+          <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Связаться</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+          <li><a class="site-footer__link" href="mailto:hello@zeleny-ugol.example">hello@zeleny-ugol.example</a></li>
+          <li class="site-footer__text">Ежедневно с 10:00 до 21:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      <p>© 2026 Зелёный угол. Рользинг Иван Викторович, ЭФБО-13-25</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+
+</body>
+</html>
